@@ -1,0 +1,326 @@
+.container {
+  /* padding: 0 2rem; */
+  display: grid;
+  place-items: center;
+}
+
+.main {
+  min-height: 100vh;
+  /* padding: 4rem 0; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  /* padding: 2rem 0; */
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+#space{
+  margin: auto;
+  display: grid;
+  place-items: center;
+  width: 600px; 
+  height: 300px;
+  transform: perspective 300px;
+  transform-origin: 10px 10px; 
+}
+
+.elogo{
+  margin: auto;
+  position: reative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform-origin: 50px 50px 0;
+  transform: perspective(400px) rotateY(46deg) rotateX(-5deg) rotateZ(-5deg);
+    animation: aniether 6s infinite;
+    transform-style: preserve-3d;
+    transform-origin: 110px 110px 0;
+    transform: perspective(400px) rotateY(46deg) rotateX(-5deg) rotateZ(-5deg);
+}
+
+.trif {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent; 
+  border-right: 100px solid transparent;
+}
+.elogo .u1 {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent; 
+  border-right: 100px solid transparent;
+    transform: translateZ(50px) rotateX(23.5deg);  
+    border-bottom: 250px solid rgba(50,50,51,0.8);
+}
+.elogo .u2 { 
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent; 
+  border-right: 100px solid transparent;
+    transform: rotateY(90deg) translateZ(50px) rotateX(23.5deg);
+    border-bottom: 250px solid rgba(50,50,51,0.6);
+}
+.elogo .u3 { 
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent; 
+  border-right: 100px solid transparent;
+    transform: rotateY(180deg) translateZ(50px) rotateX(23.5deg); 
+    border-bottom: 250px solid rgba(50,50,51,0.3);
+}
+.elogo .u4 { 
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent; 
+  border-right: 100px solid transparent;
+    transform: rotateY(-90deg) translateZ(50px) rotateX(23.5deg); 
+    border-bottom: 250px solid rgba(50,50,51,0.3);
+}
+
+.elogo .ct { 
+    width: 200px;
+    height: 200px;
+    border: 0;
+    transform: rotateX(-90deg) translateZ(140px);
+    background-color: rgba(60,60,61,1);
+}
+.elogo .l1 { 
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent; 
+  border-right: 100px solid transparent;
+    transform: translateY(55px) translateZ(50px) rotateX(156.5deg);
+    border-bottom: 250px solid rgba(50,50,51,0.85);
+}
+.elogo .l4 { 
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent; 
+  border-right: 100px solid transparent;
+    transform: translateY(55px) rotateY(-90deg) rotateZ(0deg) translateZ(50px) rotateX(156.5deg); 
+  border-bottom: 250px solid rgba(50,50,51,0.45);
+}
+
+@keyframes aniether {
+    20%      {transform: perspective(400px) rotateY(46deg); }
+    30%      {transform: perspective(400px) rotateY(10deg); }
+    50%      {transform: perspective(400px) rotateY(46deg); }
+    60%      {transform: perspective(400px) rotateY(80deg); }
+    80%      {transform: perspective(400px) rotateY(46deg); }
+   100%      {transform: perspective(400px) rotateY(46deg) rotateX(-5deg) rotateZ(-5deg); }
+}
+
+.home_landing_parent{
+  width: 100%;
+  height: 90vh;
+  /* display: grid; */
+  overflow-y: hidden !important;
+  /* place-items: center; */
+}
+
+.first_heading_div{
+  width: 100%;
+  height: fit-content;
+  display:flex;
+  margin-top: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.first_heading{
+  font-size:60px;
+  color: #F05F66;
+  font-weight: bold;
+}
+
+.second_heading_div{
+  width: 100%;
+  height: fit-content;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second_heading{
+  font-size:50px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.para_span_div{
+  width: 80%;
+  height: fit-content;
+  display:flex;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.para_span{
+  font-size:12px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.first_div_parent{
+  width: 100%;
+  height: fit-content;
+  padding:20px;
+  margin-left: auto !important;
+}
+
+.fdiv_heading_div{
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  font-size:30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.fdiv_card_parent{
+  margin-top:50px;
+  width: 70%;
+  height: fit-content !important;
+  background-color:#1C1254;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.fdiv_card_icon{
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.fdiv_card_text{
+  width: 100%;
+  font-size:12px;
+  text-align: left;
+  color:#fff;
+  padding-left:20px;
+  padding-right:20px;
+  margin-top:10px;
+  margin-bottom: 30px;
+}
+
+.timeline_div_parent{
+  width: 80%;
+  height: fit-content;
+}
+
