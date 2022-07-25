@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { FormEvent, useState } from "react";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import { ProposalList } from "../components/proposalList";
 import { useData } from "../contexts/dataContext";
 import styles from "../styles/Home.module.css";
@@ -43,6 +44,7 @@ export default function Home() {
   const { isMember, isStakeholder, loading } = useData();
   if (loading) return <div>Loading...</div>;
   return (
+    <>
     <div className={styles.container}>
       <Head>
         <title>Funding DAO</title>
@@ -55,7 +57,7 @@ export default function Home() {
           
         >
           <div className="w-3/4 border-2 border-blue-600 p-3 mt-10"
-          style={{"backgroundColor":"#2B2F3E","boxShadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px","border": "none"}}>
+          style={{"backgroundColor":"#2B2F3E","boxShadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px","border": "none",borderRadius:"5px"}}>
             <div className="flex flex-col justify-center">
               <span className="text-xl text-center" style={{"color":"#fff"}}>Create a new Proposal</span>
               <p className="mt-4 text-sm" style={{"color":"#fff"}}>
@@ -116,5 +118,7 @@ export default function Home() {
         </main>
       )}
     </div>
+      {/* <Footer/> */}
+      </>
   );
 }

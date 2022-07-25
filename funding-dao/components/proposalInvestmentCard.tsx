@@ -52,7 +52,7 @@ export const ProposalInvestmentCard: React.FC<Props> = ({
         fundingRaised={Web3.utils.fromWei(proposal.totalFundRaised)}
       />
       <div className="flex flex-col border-2 border-gray-300 p-3 hover:border-blue-700"
-      style={{"width":"98%","backgroundColor":"#2B2F3E","boxShadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px","border": "none"}}>
+      style={{"width":"98%","backgroundColor":"#2B2F3E","boxShadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px","border": "none",borderRadius:"5px",height:"fit-content"}}>
         <div className="flex flex-col">
           <span className="text-sm text-gray-500 inline-flex justify-between" style={{"color":"#fff"}}>
             Proposal - #{parseInt(proposal.id) + 1}
@@ -115,20 +115,20 @@ export const ProposalInvestmentCard: React.FC<Props> = ({
         {!isCompleted && (
           <div className="flex flex-row flex-nowrap justify-between items-center mt-5">
             <div className="flex flex-col space-y-1">
-              <span className="text-xs text-gray-500 font-bold">Time</span>
+              <span className="text-xs text-gray-500 font-bold" style={{"color":"#fff"}}>Time</span>
               <span className="text-sm">
-                <span>{days} days</span> <span>{hours}</span>:
-                <span>{minutes}</span>:<span>{seconds}</span>
+                <span style={{"color":"#fff"}}>{days} days</span> <span style={{"color":"#fff"}}>{hours}:</span>
+                <span style={{"color":"#fff"}}>{minutes}:</span><span style={{"color":"#fff"}}>{seconds}</span>
                 {/* <span>{ampm}</span> */}
               </span>
             </div>
             <div className="flex flex-col space-y-1">
-              <span className="text-xs text-gray-500 font-bold">In Favor</span>
-              <span className="text-sm">{proposal.voteInFavor}</span>
+              <span className="text-xs text-gray-500 font-bold" style={{"color":"#fff"}}>In Favor</span>
+              <span className="text-sm" style={{"color":"#fff"}}>{proposal.voteInFavor}</span>
             </div>
             <div className="flex flex-col space-y-1">
-              <span className="text-xs text-gray-500 font-bold">Against</span>
-              <span className="text-sm">{proposal.voteAgainst}</span>
+              <span className="text-xs text-gray-500 font-bold" style={{"color":"#fff"}}>Against</span>
+              <span className="text-sm" style={{"color":"#fff"}}>{proposal.voteAgainst}</span>
             </div>
           </div>
         )}

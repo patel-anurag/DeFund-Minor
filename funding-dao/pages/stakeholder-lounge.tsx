@@ -3,7 +3,7 @@ import { useState } from "react";
 import Navbar from "../components/navbar";
 import { useData } from "../contexts/dataContext";
 import styles from "../styles/Home.module.css";
-
+import Footer from "../components/footer";
 export default function Home() {
   const { loading, account, createStakeholder, currentBal } = useData();
   const [val, setVal] = useState("");
@@ -25,6 +25,7 @@ export default function Home() {
     );
   }
   return (
+    <>
     <div className={styles.container}>
       <Head>
         <title>Funding DAO</title>
@@ -32,7 +33,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="w-screen flex py-4 flex-grow justify-center">
+      <main className="w-screen h-100 flex py-4 flex-grow justify-center">
         <div className="w-1/3 border-2 border-blue-600 rounded-xl p-3 mt-10 h-full"
         style={{"backgroundColor":"#2B2F3E","boxShadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px","border": "none"}}>
           <div className="flex flex-col justify-center">
@@ -51,7 +52,7 @@ export default function Home() {
               className="my-5 w-full py-3 px-3 text-base text-gray-700 bg-gray-100 rounded-md focus:outline-none"
               placeholder="Amount in MATIC"
               autoComplete="off"
-            />
+              />
             <button
               className="px-3 py-2 rounded-xl bg-blue-600 text-white"
               style={{backgroundColor:"#8852E6",borderRadius:"5px",marginTop:"10px",marginBottom:"20px"}} 
@@ -60,12 +61,14 @@ export default function Home() {
                   setVal("");
                 });
               }}
-            >
+              >
               Send
             </button>
           </div>
         </div>
       </main>
     </div>
+    {/* <Footer/> */}
+    </>
   );
 }

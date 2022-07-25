@@ -23,12 +23,20 @@ export const ProposalList = () => {
       </span>
       <main className="grid grid-cols-3 max-w-9xl justify-center" style={{"width":"100% !important"}}>
         {allProposals.length == 0 && (
-          <span className="text-lg font-bold mt-5 text-center">
-            Sorry, you have no proposals yet. Create one{" "}
-            <Link href="/create-proposal">
-              <a className="textx-blue-600 underline">now!</a>
-            </Link>
-          </span>
+          <div className="no_proposal_card_parent">
+            <div className="no_pro_card">
+              <div className="no_pro_card_icon_div">
+                <img src="/alert.png" style={{"height":"100%"}}/>
+              </div>
+              <div className="no_pro_card_text_div">
+                  Sorry, you have no proposals yet. Create one&nbsp;{" "}
+                  <Link href="/create-proposal">
+                    <a className="textx-blue-600 underline">now!</a>
+                  </Link>
+              </div>
+            </div>
+          </div>
+          
         )}
         {allProposals.map((proposal) => (
           <ProposalCard

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { CreateMember } from "../components/createMember";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import { ProposalList } from "../components/proposalList";
 import { useData } from "../contexts/dataContext";
 import styles from "../styles/Home.module.css";
@@ -59,7 +60,7 @@ export default function Home() {
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
         >
-          <span className={styles.first_heading}>Heading For First Line</span>
+          <span className={styles.first_heading}>Welcome To DeFund</span>
         </div>
         <div className={styles.second_heading_div}
           data-aos="fade-up"
@@ -68,7 +69,7 @@ export default function Home() {
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
         >
-          <span className={styles.second_heading}>Heading For Second Line</span>
+          <span className={styles.second_heading}>The Future of Funding</span>
         </div>
         <div className={styles.para_span_div}
         >
@@ -89,17 +90,17 @@ export default function Home() {
               data-aos-duration="800"
               data-aos-easing="ease-in-out"
             >
-                <h1 className="text-xl my-2" style={{"color":"#fff"}}>Heading</h1>
-                <span className={styles.para_span}>Heading For Second Line Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ter took a galley of type and scrambled it to make Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make</span>
+                <h1 className="text-xl my-2" style={{"color":"#fff"}}>Who Are We?</h1>
+                <span className={styles.para_span}>
+                  We are DeFund a Decentralized Autonomous Organization(DAO) , and we assist you in managing your funds. You can create a fund proposal and manage it using DeFund from any location in the world. Our interactive, user-friendly interface makes it easy for you to manage your organization's funding from any location at any time. Our main priority is to manage all of your financial tasks and records. We have a decentralised blockchain that is powered by the Ethereum blockchain that updates all the participants and members continuously.
+                </span>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.first_div_parent}>
         <div className={styles.fdiv_heading_div}>
-          First Div Heading
+          DAO Triangle
         </div>
         <div className="grid grid-cols-3 max-w-9xl justify-center">
           <div className={styles.fdiv_card_parent}
@@ -110,10 +111,11 @@ export default function Home() {
             // data-aos-easing="ease-in-out"
           >
             <div className={styles.fdiv_card_icon}>
-              <img src="/icons8-ethereum-48.png" alt="" />
+              <img src="/gover.png" alt="" style={{width:"70px"}}/>
             </div>
             <div className={styles.fdiv_card_text}>
-                Heading For Second Line Lorem Ipsum is simply dummy text Heading For Second Line Lorem Ipsum is simply dummy text
+                <h2 className="text-lg mb-2">Governance</h2>
+                Governance rules cover all aspects of an organization's existence, including its legal framework, membership, mission, operations, and off-chain and on-chain voting.
             </div>
           </div>
           <div className={styles.fdiv_card_parent}
@@ -124,10 +126,11 @@ export default function Home() {
             // data-aos-easing="ease-in-out"
           >
             <div className={styles.fdiv_card_icon}>
-              <img src="/icons8-ethereum-48.png" alt="" />
+              <img src="/decen.png" alt="" style={{width:"70px"}}/>
             </div>
             <div className={styles.fdiv_card_text}>
-                Heading For Second Line Lorem Ipsum is simply dummy text Heading For Second Line Lorem Ipsum is simply dummy text
+                <h2 className="text-lg mb-2">Decentralized</h2>
+                Technology and politics are combined in decentralisation to create a belief system that identifies the traits of people who choose to join the DAO. 
             </div>
           </div>
           <div className={styles.fdiv_card_parent}
@@ -138,131 +141,98 @@ export default function Home() {
             // data-aos-easing="ease-in-out"
           >
             <div className={styles.fdiv_card_icon}>
-              <img src="/icons8-ethereum-48.png" alt="" />
+              <img src="/indi.png" alt="" style={{width:"70px"}} />
             </div>
             <div className={styles.fdiv_card_text}>
-                Heading For Second Line Lorem Ipsum is simply dummy text Heading For Second Line Lorem Ipsum is simply dummy text
+                <h2 className="text-lg mb-2">Individual</h2>
+                People who are willing to take care of themselves and who believe in self-government and the common good are frequently referred to as individuals.
             </div>
           </div>
         </div>
       </div>
       <div className={styles.timeline_div_parent} style={{marginTop:"50px"}}>
         <div className={styles.fdiv_heading_div}>
-          Second Div Heading
+          What is DeFund?
         </div>
         <div className="container1">
                 <div className="timeline">
                     <div className="timeline-container primary">
-                        <div className="timeline-icon">
-                            <i className="far fa-grin-wink"></i>
+                        <div className="timeline-icon flex justify-center">
+                            <img src="/interface.png" style={{width:"70%",height:"60%",marginTop:"10px"}}/>
                         </div>
                         <div className="timeline-body">
-                            <h4 className="timeline-title"><span className="badge">Primary</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                            <p className="timeline-subtitle">1 Hours Ago</p>
+                            <h4 className="timeline-title"><span className="badge">Interactive User Friendly Interface</span></h4>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p> */}
                         </div>
                     </div>
                     <div className="timeline-container danger">
-                        <div className="timeline-icon">
-                            <i className="far fa-grin-hearts"></i>
+                        <div className="timeline-icon flex justify-center">
+                          <img src="/member.png" style={{width:"70%",height:"60%",marginTop:"10px"}}/>
                         </div>
                         <div className="timeline-body">
-                            <h4 className="timeline-title"><span className="badge">Danger</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                            <p className="timeline-subtitle">2 Hours Ago</p>
-                        </div>
-                    </div>
-                    <div className="timeline-container success">
-                        <div className="timeline-icon">
-                            <i className="far fa-grin-tears"></i>
-                        </div>
-                        <div className="timeline-body">
-                            <h4 className="timeline-title"><span className="badge">Success</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                            <p className="timeline-subtitle">6 Hours Ago</p>
-                        </div>
-                    </div>
-                    <div className="timeline-container warning">
-                        <div className="timeline-icon">
-                            <i className="far fa-grimace"></i>
-                        </div>
-                        <div className="timeline-body">
-                            <h4 className="timeline-title"><span className="badge">Warning</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                            <p className="timeline-subtitle">1 Day Ago</p>
-                        </div>
-                    </div>
-                    <div className="timeline-container">
-                        <div className="timeline-icon">
-                            <i className="far fa-grin-beam-sweat"></i>
-                        </div>
-                        <div className="timeline-body">
-                            <h4 className="timeline-title"><span className="badge">Secondary</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                            <p className="timeline-subtitle">3 Days Ago</p>
+                            <h4 className="timeline-title"><span className="badge">DeFund Members</span></h4>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p> */}
                         </div>
                     </div>
                     <div className="timeline-container info">
-                        <div className="timeline-icon">
-                            <i className="far fa-grin"></i>
+                        <div className="timeline-icon flex justify-center">
+                            <img src="/stakeholder.png" style={{width:"70%",height:"60%",marginTop:"10px"}}/>
                         </div>
                         <div className="timeline-body">
-                            <h4 className="timeline-title"><span className="badge">Info</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                            <p className="timeline-subtitle">4 Days Ago</p>
+                            <h4 className="timeline-title"><span className="badge">DeFund Stakeholders</span></h4>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p> */}
+                        </div>
+                    </div>
+                    <div className="timeline-container">
+                        <div className="timeline-icon flex justify-center">
+                          <img src="/records.png" style={{width:"70%",height:"60%",marginTop:"10px"}}/>
+                        </div>
+                        <div className="timeline-body">
+                            <h4 className="timeline-title"><span className="badge">Funds Records Management</span></h4>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p> */}
+                        </div>
+                    </div>
+                    <div className="timeline-container success">
+                        <div className="timeline-icon flex justify-center">
+                          <img src="/management.png" style={{width:"70%",height:"60%",marginTop:"10px"}}/>
+                        </div>
+                        <div className="timeline-body">
+                            <h4 className="timeline-title"><span className="badge">Funds Flow Management</span></h4>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p> */}
+                        </div>
+                    </div>
+                    <div className="timeline-container warning">
+                        <div className="timeline-icon flex justify-center">
+                        <img src="/updates.png" style={{width:"70%",height:"60%",marginTop:"10px"}}/>
+                        </div>
+                        <div className="timeline-body">
+                            <h4 className="timeline-title"><span className="badge">Regular Updates to Member & Stakeholders</span></h4>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p> */}
+                        </div>
+                    </div>
+                    <div className="timeline-container">
+                        <div className="timeline-icon flex justify-center">
+                        <img src="/professional.png" style={{width:"70%",height:"60%",marginTop:"10px"}}/>
+                        </div>
+                        <div className="timeline-body">
+                            <h4 className="timeline-title"><span className="badge">Professional Highly Robust Platform</span></h4>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p> */}
+                        </div>
+                    </div>
+                    <div className="timeline-container info">
+                        <div className="timeline-icon flex justify-center">
+                        <img src="/status.png" style={{width:"70%",height:"60%",marginTop:"10px"}}/>
+                        </div>
+                        <div className="timeline-body">
+                            <h4 className="timeline-title"><span className="badge">Organization Funding Status Management</span></h4>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p> */}
                         </div>
                     </div>
                 </div>
         </div>
       </div>
     </div>
-    <div className="footer">
-  <div className="inner-footer">
-
-    <div className="footer-items">
-      <h1>Company Name</h1>
-      <p>Description of any product or motto of the company.</p>
-    </div>
-
-    <div className="footer-items">
-      <h3>Quick Links</h3>
-      <div className="border1"></div> 
-        <ul>
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>Search</li></a>
-          <a href="#"><li>Contact</li></a>
-          <a href="#"><li>About</li></a>
-        </ul>
-    </div>
-
-    <div className="footer-items">
-      <h3>Recipes</h3>
-      <div className="border1"></div>  
-        <ul>
-          <a href="#"><li>Indian</li></a>
-          <a href="#"><li>Chinese</li></a>
-          <a href="#"><li>Mexican</li></a>
-          <a href="#"><li>Italian</li></a>
-        </ul>
-    </div>
-
-    <div className="footer-items">
-      <h3>Contact us</h3>
-      <div className="border1"></div>
-        <ul>
-          <li><i className="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc</li>
-          <li><i className="fa fa-phone" aria-hidden="true"></i>123456789</li>
-          <li><i className="fa fa-envelope" aria-hidden="true"></i>xyz@gmail.com</li>
-        </ul> 
-      
-        <div className="social-media">
-          <a href="#"><i className="fab fa-instagram"></i></a>
-          <a href="#"><i className="fab fa-facebook"></i></a>
-          <a href="#"><i className="fab fa-google-plus-square"></i></a>
-        </div> 
-    </div>
-  </div>
-</div>
+    <Footer/>
   
     </>
   );

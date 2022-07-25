@@ -22,7 +22,7 @@ export const ProposalCard: React.FC<Props> = ({ proposal, openModal }) => {
   return (
     <div
       className="sm:my-1 sm:px-1 sm:w-1/2 md:my-2 md:px-2 md:w-1/2 lg:w-1/2 xl:w-1/2 my-2 mx-3 border-2 border-gray-300 hover:border-blue-700"
-      style={{"width":"98%","backgroundColor":"#2B2F3E","boxShadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px","border": "none"}}
+      style={{"width":"98%","backgroundColor":"#2B2F3E","boxShadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px","border": "none",borderRadius:"5px",height:"fit-content",marginTop:"-100px"}}
       onClick={async () => {
         if (isStakeholder) {
           console.log("isStakeholder");

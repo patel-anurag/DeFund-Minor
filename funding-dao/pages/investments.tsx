@@ -34,9 +34,16 @@ export default function Home() {
       <span className="text-lg font-bold my-5" style={{"color":"#fff"}}>My Investments</span>
       <main className="grid grid-cols-3 max-w-9xl justify-center" style={{"width":"100% !important"}}>
         {allInvestedProposal.length == 0 && (
-          <span className="text-lg font-bold mt-5 text-center" style={{"color":"#fff"}}>
+          <div className="no_proposal_card_parent" style={{"marginTop":"100px"}}>
+          <div className="no_pro_card">
+            <div className="no_pro_card_icon_div">
+              <img src="/alert.png" style={{"height":"100%"}}/>
+            </div>
+            <div className="no_pro_card_text_div">
             Sorry, you have not voted in any proposals yet.
-          </span>
+            </div>
+          </div>
+        </div>
         )}
         {allInvestedProposal.map((proposal) => (
           <ProposalInvestmentCard

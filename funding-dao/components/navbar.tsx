@@ -41,13 +41,11 @@ function Navbar() {
                     isActive={router.asPath === "/"}
                     url={"/"}
                   />
-                  {isMember && (
-                    <TabButton
-                      title="Contracts"
-                      isActive={router.asPath === "/contracts"}
-                      url={"/contracts"}
-                    />
-                  )}
+                  <TabButton
+                    title="Contracts"
+                    isActive={router.asPath === "/contracts"}
+                    url={"/contracts"}
+                  />
                   {isMember && (
                     <TabButton
                       title="Create Proposal"
